@@ -11,16 +11,17 @@ class GuessingGame {
     }
 
     guess() {
-    this.result = Math.floor((this.min + this.max) / 2);
+    // this.result = Math.round((this.min + this.max) / 2);
+    this.result = Math.round(this.min + (this.max - this.min) / 2);
     return this.result;
     }
 
     lower() {
-    this.max = this.result - 1;
+    this.max = this.result;
     }
 
     greater() {
-    this.min = this.result + 1;
+    this.min = this.result;
     }
 }
 
